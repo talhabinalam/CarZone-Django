@@ -99,30 +99,34 @@ $(function () {
         placedDashboard();
     });
 
-    function adjustHeader()
-    {
+
+    function adjustHeader() {
         var windowWidth = $(window).width();
-        if(windowWidth > 0) {
+        if (windowWidth > 0) {
             if ($(document).scrollTop() >= 100) {
-                if($('.header-shrink').length < 1) {
+                if ($('.header-shrink').length < 1) {
                     $('.sticky-header').addClass('header-shrink');
                 }
-                if($('.do-sticky').length < 1) {
-                    $('.company-logo img').attr('src', 'static/img/logos/black-logo.png');
+                if ($('.do-sticky').length < 1) {
+                    var blackLogoSrc = $('.company-logo').data('black-logo');
+                    $('.company-logo img').attr('src', blackLogoSrc);
                 }
-            }
-            else {
+            } else {
                 $('.sticky-header').removeClass('header-shrink');
-                if($('.do-sticky').length < 1 && $('.fixed-header').length == 0 && $('.fixed-header2').length == 0) {
-                    $('.company-logo img').attr('src', 'static/img/logos/logo.png');
+                if ($('.do-sticky').length < 1 && $('.fixed-header').length == 0 && $('.fixed-header2').length == 0) {
+                    var logoSrc = $('.company-logo').data('logo');
+                    $('.company-logo img').attr('src', logoSrc);
                 } else {
-                    $('.company-logo img').attr('src', 'static/img/logos/black-logo.png');
+                    var blackLogoSrc = $('.company-logo').data('black-logo');
+                    $('.company-logo img').attr('src', blackLogoSrc);
                 }
             }
         } else {
-            $('.company-logo img').attr('src', 'static/img/logos/black-logo.png');
+            var blackLogoSrc = $('.company-logo').data('black-logo');
+            $('.company-logo img').attr('src', blackLogoSrc);
         }
     }
+    
 
     function doSticky()
     {
