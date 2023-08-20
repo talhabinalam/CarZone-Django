@@ -9759,7 +9759,6 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     color: #f0151f;
 }
 
-
 a.nav-link.active{
   color: #f0151f !important;
 }
@@ -9767,11 +9766,6 @@ a.nav-link.active{
 .tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
   color: #fff !important;
 }
-
-
-
-
-
 
 
 
