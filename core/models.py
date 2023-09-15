@@ -1,4 +1,3 @@
-from typing import Any
 from django.db import models
 
 
@@ -14,3 +13,6 @@ class Team(models.Model):
     
     def __str__(self):
         return self.first_name
+    
+    def full_name(self):
+        return self.first_name + " " + self.last_name
